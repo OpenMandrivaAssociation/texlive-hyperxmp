@@ -1,3 +1,9 @@
+# revision 23378
+# category Package
+# catalog-ctan /macros/latex/contrib/hyperxmp
+# catalog-date 2011-06-13 21:57:04 +0200
+# catalog-license lppl
+# catalog-version 1.4
 Name:		texlive-hyperxmp
 Version:	1.4
 Release:	1
@@ -56,6 +62,7 @@ latex+dvips+ps2pdf.
 #- source
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.dtx
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -66,3 +73,5 @@ latex+dvips+ps2pdf.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
