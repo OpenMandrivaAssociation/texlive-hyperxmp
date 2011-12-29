@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 XMP (eXtensible Metadata Platform) is a mechanism proposed by
@@ -39,20 +36,12 @@ hyperxmp currently embeds XMP only within PDF documents but is
 compatible with pdflatex, xelatex, latex+dvipdfm, and
 latex+dvips+ps2pdf.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -63,7 +52,6 @@ latex+dvips+ps2pdf.
 #- source
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.dtx
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -74,5 +62,3 @@ latex+dvips+ps2pdf.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
