@@ -1,12 +1,12 @@
-# revision 23378
+# revision 25621
 # category Package
 # catalog-ctan /macros/latex/contrib/hyperxmp
-# catalog-date 2011-06-13 21:57:04 +0200
+# catalog-date 2012-03-12 10:30:29 +0100
 # catalog-license lppl
-# catalog-version 1.4
+# catalog-version 1.5
 Name:		texlive-hyperxmp
-Version:	1.4
-Release:	2
+Version:	1.5
+Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
