@@ -1,11 +1,11 @@
-# revision 25621
+# revision 27753
 # category Package
 # catalog-ctan /macros/latex/contrib/hyperxmp
-# catalog-date 2012-03-12 10:30:29 +0100
+# catalog-date 2012-09-20 07:36:34 +0200
 # catalog-license lppl
-# catalog-version 1.5
+# catalog-version 2.1
 Name:		texlive-hyperxmp
-Version:	1.5
+Version:	2.1
 Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
@@ -50,6 +50,7 @@ latex+dvips+ps2pdf.
 %doc %{_texmfdistdir}/doc/latex/hyperxmp/README
 %doc %{_texmfdistdir}/doc/latex/hyperxmp/hyperxmp.pdf
 #- source
+%doc %{_texmfdistdir}/source/latex/hyperxmp/einstein.png
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.dtx
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.ins
 
