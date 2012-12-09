@@ -1,11 +1,11 @@
-# revision 27753
+# revision 25621
 # category Package
 # catalog-ctan /macros/latex/contrib/hyperxmp
-# catalog-date 2012-09-20 07:36:34 +0200
+# catalog-date 2012-03-12 10:30:29 +0100
 # catalog-license lppl
-# catalog-version 2.1
+# catalog-version 1.5
 Name:		texlive-hyperxmp
-Version:	2.1
+Version:	1.5
 Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
@@ -50,7 +50,6 @@ latex+dvips+ps2pdf.
 %doc %{_texmfdistdir}/doc/latex/hyperxmp/README
 %doc %{_texmfdistdir}/doc/latex/hyperxmp/hyperxmp.pdf
 #- source
-%doc %{_texmfdistdir}/source/latex/hyperxmp/einstein.png
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.dtx
 %doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.ins
 
@@ -63,3 +62,21 @@ latex+dvips+ps2pdf.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5-1
++ Revision: 787626
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.4-2
++ Revision: 752630
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.4-1
++ Revision: 718632
+- texlive-hyperxmp
+- texlive-hyperxmp
+- texlive-hyperxmp
+- texlive-hyperxmp
+
