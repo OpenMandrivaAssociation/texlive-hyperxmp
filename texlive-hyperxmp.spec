@@ -6,7 +6,7 @@
 # catalog-version 2.1
 Name:		texlive-hyperxmp
 Version:	2.1
-Release:	1
+Release:	2
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
