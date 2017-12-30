@@ -5,8 +5,8 @@
 # catalog-license lppl1.3
 # catalog-version 2.4
 Name:		texlive-hyperxmp
-Version:	2.40
-Release:	5
+Version:	3.4
+Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
