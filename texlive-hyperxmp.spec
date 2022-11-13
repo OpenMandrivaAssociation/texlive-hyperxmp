@@ -1,19 +1,13 @@
-# revision 32560
-# category Package
-# catalog-ctan /macros/latex/contrib/hyperxmp
-# catalog-date 2014-01-03 12:23:53 +0100
-# catalog-license lppl1.3
-# catalog-version 2.4
 Name:		texlive-hyperxmp
-Version:	4.1
+Version:	57004
 Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -46,33 +40,29 @@ documents; it is compatible with pdflatex, xelatex,
 latex+dvipdfm, and latex+dvips+ps2pdf.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/hyperxmp/hyperxmp.sty
-%doc %{_texmfdistdir}/doc/latex/hyperxmp/README
-%doc %{_texmfdistdir}/doc/latex/hyperxmp/hyperxmp.pdf
+%{_texmfdistdir}/tex/latex/hyperxmp
+%{_texmfdistdir}/scripts/hyperxmp
+%doc %{_texmfdistdir}/doc/latex/hyperxmp
+%doc %{_texmfdistdir}/doc/man/man1/*
 #- source
-%doc %{_texmfdistdir}/source/latex/hyperxmp/einstein-xmp.tex
-%doc %{_texmfdistdir}/source/latex/hyperxmp/einstein1.png
-%doc %{_texmfdistdir}/source/latex/hyperxmp/einstein2.png
-%doc %{_texmfdistdir}/source/latex/hyperxmp/gglo-hyxmp.ist
-%doc %{_texmfdistdir}/source/latex/hyperxmp/gind-hyxmp.ist
-%doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.dtx
-%doc %{_texmfdistdir}/source/latex/hyperxmp/hyperxmp.ins
+%doc %{_texmfdistdir}/source/latex/hyperxmp
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar texmf-dist/* %{buildroot}%{_texmfdistdir}
