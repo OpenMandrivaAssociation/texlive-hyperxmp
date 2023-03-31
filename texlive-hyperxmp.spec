@@ -1,6 +1,6 @@
 Name:		texlive-hyperxmp
 Version:	57004
-Release:	1
+Release:	2
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
