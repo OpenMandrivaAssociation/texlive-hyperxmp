@@ -1,5 +1,5 @@
 Name:		texlive-hyperxmp
-Version:	65980
+Version:	68251
 Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
