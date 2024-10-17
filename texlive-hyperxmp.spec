@@ -3,7 +3,7 @@ Version:	70694
 Release:	1
 Summary:	Embed XMP metadata within a LaTeX document
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/hyperxmp
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyperxmp.doc.r%{version}.tar.xz
